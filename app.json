@@ -1,25 +1,32 @@
 {
   "expo": {
-    "name": "pet-store-app",
+    "name": "PetStore",
     "slug": "pet-store-app",
     "version": "1.0.0",
+    "scheme": "petstore",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "ios": {
-      "supportsTablet": true
-    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "PetStore necesita acceso a tus fotos para agregar imágenes a tus productos.",
+          "cameraPermission": "PetStore necesita acceso a la cámara para fotografiar productos.",
+          "microphonePermission": false
+        }
+      ],
+      "expo-font"
+    ],
     "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      },
-      "predictiveBackGestureEnabled": false
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+      "package": "com.eli_borja.petstoreapp"
     }
   }
 }

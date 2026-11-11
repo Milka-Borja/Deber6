@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@import 'uniwind';
+
+@theme {
+  --color-salmon-light: #ffe4e6;
+  --color-salmon: #fca5a5;
+  --color-salmon-dark: #f87171;
+  --color-dark: #111827;
+}
